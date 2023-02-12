@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid-min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+</head>
+<body class="body-container">
+    <div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <h1 class="title">Possible questions at the interview for the specified vacancy</h1>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <form method="post" action="/result">
+        {% csrf_token %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_1 }}" name="questions">
+                        <p class="question question-1 visible">{{ question_1 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-1 visible">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_2 }}" name="questions">
+                        <p class="question question-2">{{ question_2 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-2">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_3 }}" name="questions">
+                        <p class="question question-3">{{ question_3 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-3">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_4 }}" name="questions">
+                        <p class="question question-4">{{ question_4 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-4">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_5 }}" name="questions">
+                        <p class="question question-5">{{ question_5 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-5">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_6 }}" name="questions">
+                        <p class="question question-6">{{ question_6 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-6">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_7 }}" name="questions">
+                        <p class="question question-7">{{ question_7 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-7">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_8 }}" name="questions">
+                        <p class="question question-8">{{ question_8 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-8">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_9 }}" name="questions">
+                        <p class="question question-9">{{ question_9 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-9">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="hidden" value="{{ question_10 }}" name="questions">
+                        <p class="question question-10">{{ question_10 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input type="text" required name="answers" placeholder="Enter your answer" class="answer answer-10">
+                    </div>
+                </div>
+
+                <div class="row separator">
+                    <div class="col-12"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <label class="button-object invisible">
+                            <span class="visible-button">SEND</span>
+                            <button type="submit" class="button">Отправить</button>
+                        </label>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'js/answer-javascript.js' %}"></script>
+</body>
+</html>

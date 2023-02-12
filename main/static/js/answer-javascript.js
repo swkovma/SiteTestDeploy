@@ -1,0 +1,43 @@
+let Question1 = document.querySelector("#question-1");
+let Question2 = document.querySelector("#question-2");
+let Question3 = document.querySelector("#question-3");
+let Question4 = document.querySelector("#question-4");
+let Question5 = document.querySelector("#question-5");
+let Question6 = document.querySelector("#question-6");
+let Question7 = document.querySelector("#question-7");
+let Question8 = document.querySelector("#question-8");
+let Question9 = document.querySelector("#question-9");
+let Question10 = document.querySelector("#question-10");
+
+let answerSection1 = document.querySelector("#answer-section-1");
+let answerSection2 = document.querySelector("#answer-section-2");
+let answerSection3 = document.querySelector("#answer-section-3");
+let answerSection4 = document.querySelector("#answer-section-4");
+let answerSection5 = document.querySelector("#answer-section-5");
+let answerSection6 = document.querySelector("#answer-section-6");
+let answerSection7 = document.querySelector("#answer-section-7");
+let answerSection8 = document.querySelector("#answer-section-8");
+let answerSection9 = document.querySelector("#answer-section-9");
+let answerSection10 = document.querySelector("#answer-section-10");
+
+let Button1 = document.querySelector("#start-1");
+let Button2 = document.querySelector("#start-2");
+let Button3 = document.querySelector("#start-3");
+let Button4 = document.querySelector("#start-4");
+let Button5 = document.querySelector("#start-5");
+let Button6 = document.querySelector("#start-6");
+let Button7 = document.querySelector("#start-7");
+let Button8 = document.querySelector("#start-8");
+let Button9 = document.querySelector("#start-9");
+let Button10 = document.querySelector("#start-10");
+
+setTimeout(() => {Question1.classList.remove("invisible"); Button1.classList.remove("invisible"); answerSection1.classList.remove("invisible");}, 1 * 1000);
+setTimeout(() => {Question2.classList.remove("invisible"); Button2.classList.remove("invisible"); answerSection2.classList.remove("invisible");}, 2 * 1000);
+setTimeout(() => {Question3.classList.remove("invisible"); Button3.classList.remove("invisible"); answerSection3.classList.remove("invisible");}, 3 * 1000);
+setTimeout(() => {Question4.classList.remove("invisible"); Button4.classList.remove("invisible"); answerSection4.classList.remove("invisible");}, 4 * 1000);
+setTimeout(() => {Question5.classList.remove("invisible"); Button5.classList.remove("invisible"); answerSection5.classList.remove("invisible");}, 5 * 1000);
+setTimeout(() => {Question6.classList.remove("invisible"); Button6.classList.remove("invisible"); answerSection6.classList.remove("invisible");}, 6 * 1000);
+setTimeout(() => {Question7.classList.remove("invisible"); Button7.classList.remove("invisible"); answerSection7.classList.remove("invisible");}, 7 * 1000);
+setTimeout(() => {Question8.classList.remove("invisible"); Button8.classList.remove("invisible"); answerSection8.classList.remove("invisible");}, 8 * 1000);
+setTimeout(() => {Question9.classList.remove("invisible"); Button9.classList.remove("invisible"); answerSection9.classList.remove("invisible");}, 9 * 1000);
+setTimeout(() => {Question10.classList.remove("invisible"); Button10.classList.remove("invisible"); answerSection10.classList.remove("invisible");}, 10 * 1000);

@@ -1,0 +1,153 @@
+/* Global Style */
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+.body {
+    margin: 0 auto;
+}
+
+.separator {
+    height: 50px;
+}
+
+/* Main Section Style */
+.body-container {
+    margin-top: 10%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgba(0,0,0,.1);
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.7);
+    border: none;
+    margin-bottom: 10%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: "Mukta", sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 80px;
+    text-align: center;
+    color: rgba(0, 0, 0, .77);
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.answer-section {
+    background-color: rgba(0,0,0,.2);
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0.7);
+    margin-bottom: 60px;
+    padding-top: 30px;
+}
+
+
+/* Question Section Style */
+.question {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    font-family: "Mukta", sans-serif;
+    background-color: rgba(0,0,255,.6);
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 25px;
+}
+
+.answer {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    font-family: "Mukta", sans-serif;
+    background-color: rgba(0,255,0,.3);
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button {
+    opacity: 0;
+}
+
+.visible-button {
+    display: block;
+    border-radius: 50px;
+    border: 2px solid rgba(0,0,0,.5);
+    margin: 0 auto;
+    width: 50%;
+    height: 60px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    box-shadow: 4px 4px 10px black;
+}
+
+.button-object {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.record-button {
+    cursor: pointer;
+    background-color: rgba(255,0,0,.5);
+    margin-bottom: 25px;
+    font-size: 45px;
+    font-family: "Mukta", sans-serif;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid blue;
+}
+
+
+/* Upgrade Answer Style */
+.upgrade-button, .load-upgrade-message {
+    cursor: pointer;
+    background-color: rgba(255,0,0,.5);
+    margin-bottom: 25px;
+    font-size: 45px;
+    font-family: "Mukta", sans-serif;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid blue;
+}
+
+.upgrade-answer {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    font-family: "Mukta", sans-serif;
+    background-color: rgba(0,255,0,.7);
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.invisible {
+    display: none;
+}
+

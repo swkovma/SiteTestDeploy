@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid-min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body class="body-container">
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <h1 class="title">Prepare for the interview with&nbsp;ChatGPT</h1>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <form method="post" class="form" action="questions">
+                    {% csrf_token %}
+                    <p class="input-label">Enter the link to the vacancy</p>
+                    <label>
+                        <span class="visible-input"></span>
+                        {{ form }}
+                    </label>
+                    <label>
+                        <span class="visible-button">GENERATE</span>
+                        <button type="submit" class="button">ОК</button>
+                    </label>
+                </form>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="about-chatgpt-section">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-4">
+                    <h2 class="about-chatgpt">About&nbsp;ChatGPT</h2>
+                </div>
+                <div class="col-7"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <p class="about-chatgpt-description">ChatGPT is a conversational AI chatbot developed by OpenAI that supports natural language queries. ChatGPT is a large language model trained using supervised learning and reinforcement learning methods.</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <div class="about-company-section">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-4">
+                    <h2 class="about-company-title">About&nbsp;OpenAI</h2>
+                </div>
+                <div class="col-7"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <p class="company-description">OpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence benefits all of humanity.</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 final-row"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,502 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid-min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+</head>
+<body class="body-container">
+    <div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <h1 class="title">Possible questions at the interview for the specified vacancy</h1>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <div class="container">
+<!--                first question-->
+            <div class="answer-section invisible" id="answer-section-1">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-1">{{ question_1 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-1">Record answer</div>
+                        <div class="record-button invisible" id="stop-1">Stop</div>
+                        <div class="record-button invisible" id="load-message-1">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-1">
+                            <p class="answer-title" id="answer-title-1">Your answer: </p>
+                            <p class="answer-content" id="answer-content-1"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-1">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-1">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-1">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-1">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-1"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                second question-->
+            <div class="answer-section invisible" id="answer-section-2">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-2">{{ question_2 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-2">Record answer</div>
+                        <div class="record-button invisible" id="stop-2">Stop</div>
+                        <div class="record-button invisible" id="load-message-2">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-2">
+                            <p class="answer-title" id="answer-title-2">Your answer: </p>
+                            <p class="answer-content" id="answer-content-2"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-2">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-2">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-2">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-2">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-2"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                third question-->
+            <div class="answer-section invisible" id="answer-section-3">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-3">{{ question_3 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-3">Record answer</div>
+                        <div class="record-button invisible" id="stop-3">Stop</div>
+                        <div class="record-button invisible" id="load-message-3">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-3">
+                            <p class="answer-title" id="answer-title-3">Your answer: </p>
+                            <p class="answer-content" id="answer-content-3"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-3">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-3">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-3">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-3">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-3"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                4th question-->
+            <div class="answer-section invisible" id="answer-section-4">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-4">{{ question_4 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-4">Record answer</div>
+                        <div class="record-button invisible" id="stop-4">Stop</div>
+                        <div class="record-button invisible" id="load-message-4">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-4">
+                            <p class="answer-title" id="answer-title-4">Your answer: </p>
+                            <p class="answer-content" id="answer-content-4"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-4">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-4">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-4">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-4">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-4"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                5th question-->
+            <div class="answer-section invisible" id="answer-section-5">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-5">{{ question_5 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-5">Record answer</div>
+                        <div class="record-button invisible" id="stop-5">Stop</div>
+                        <div class="record-button invisible" id="load-message-5">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-5">
+                            <p class="answer-title" id="answer-title-5">Your answer: </p>
+                            <p class="answer-content" id="answer-content-5"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-5">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-5">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-5">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-5">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-5"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                6th question-->
+            <div class="answer-section invisible" id="answer-section-6">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-6">{{ question_6 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-6">Record answer</div>
+                        <div class="record-button invisible" id="stop-6">Stop</div>
+                        <div class="record-button invisible" id="load-message-6">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-6">
+                            <p class="answer-title" id="answer-title-6">Your answer: </p>
+                            <p class="answer-content" id="answer-content-6"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-6">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-6">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-6">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-6">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-6"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                7th question-->
+            <div class="answer-section invisible" id="answer-section-7">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-7">{{ question_7 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-7">Record answer</div>
+                        <div class="record-button invisible" id="stop-7">Stop</div>
+                        <div class="record-button invisible" id="load-message-7">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-7">
+                            <p class="answer-title" id="answer-title-7">Your answer: </p>
+                            <p class="answer-content" id="answer-content-7"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-7">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-7">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-7">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-7">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-7"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                8th question-->
+            <div class="answer-section invisible" id="answer-section-8">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-8">{{ question_8 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-8">Record answer</div>
+                        <div class="record-button invisible" id="stop-8">Stop</div>
+                        <div class="record-button invisible" id="load-message-8">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-8">
+                            <p class="answer-title" id="answer-title-8">Your answer: </p>
+                            <p class="answer-content" id="answer-content-8"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-8">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-8">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-8">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-8">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-8"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                9th question-->
+            <div class="answer-section invisible" id="answer-section-9">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-9">{{ question_9 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-9">Record answer</div>
+                        <div class="record-button invisible" id="stop-9">Stop</div>
+                        <div class="record-button invisible" id="load-message-9">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-9">
+                            <p class="answer-title" id="answer-title-9">Your answer: </p>
+                            <p class="answer-content" id="answer-content-9"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-9">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-9">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-9">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-9">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-9"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+<!--                10th question-->
+            <div class="answer-section invisible" id="answer-section-10">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <p class="question invisible" id="question-10">{{ question_10 }}</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="record-button invisible" id="start-10">Record answer</div>
+                        <div class="record-button invisible" id="stop-10">Stop</div>
+                        <div class="record-button invisible" id="load-message-10">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="col-12 answer invisible" id="answer-10">
+                            <p class="answer-title" id="answer-title-10">Your answer: </p>
+                            <p class="answer-content" id="answer-content-10"></p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="upgrade-button invisible" id="upgrade-button-10">Improve</div>
+                        <div class="load-upgrade-message invisible" id="load-upgrade-message-10">Processing...</div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="upgrade-answer invisible" id="upgrade-answer-10">
+                            <p class="upgrade-answer-title" id="upgrade-answer-title-10">Improved answer: </p>
+                            <p class="upgrade-answer-content" id="upgrade-answer-content-10"></p>
+                        </div>
+                    </div>
+                    <div class="col-10"></div>
+                </div>
+            </div>
+            <div class="row separator"></div>
+        </div>
+    </div>
+    <script src="{% static 'js/answer-javascript.js' %}"></script>
+    <script src="{% static 'js/voice-recorder.js' %}"></script>
+</body>
+</html>
