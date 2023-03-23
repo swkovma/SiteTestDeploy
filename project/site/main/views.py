@@ -172,7 +172,7 @@ def voice(request):
     try:
         if request.method == "POST":
             audio = request.FILES["voice"].read()
-            path = pathlib.Path(os.getcwd(), "main", "static", "voices", "voice.wav")
+            path = pathlib.Path(os.getcwd(), "static", "voices", "voice.wav")
             with open(path, "wb") as file:
                 file.write(audio)
             text = encoding_audio_by_path(path=path)
